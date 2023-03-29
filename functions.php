@@ -1,6 +1,7 @@
 <?php
-// check_login สร้างหลังใส่ใน index.php
-function check_login($con) {
+
+function check_login($con) 
+{
 
   if (isset($_SESSION['user_id']))
   {
@@ -8,7 +9,7 @@ function check_login($con) {
     $id = $_SESSION['user_id'];
     $query = "select * from users where user_id = '$id' limit 1";
 
-    $result = mysqli_query($con, $qurey);
+    $result = mysqli_query($con, $query);
     if($result && mysqli_num_rows($result) > 0)
     {
         $user_data = mysqli_fetch_assoc($result);
