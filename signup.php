@@ -1,14 +1,17 @@
 <?php
     session_start();
     
-    $_SESSION;
+    include("connection.php");
+    include("functions.php");
+
+    $user_data = check_login($con);
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Login</title>
+   <title>Signup</title>
 </head>
 <body>
     <style type="text/css">
@@ -36,13 +39,13 @@
 
     <div id="box">
         <form method="post">
-            <div style="font-size: 20px;margin: 10px;color: white;">Login</div>
+            <div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
 
             <input id="text" type="text" name="user_name"><br><br>
             <input id="text" type="password" name="password"><br><br>
 
-            <input id="button" type="submit" value="login"><br><br>
-            <a href="signup.php">Click to Signup</a><br><br>
+            <input id="button" type="submit" value="Singup"><br><br>
+            <a href="login.php">Click to Login</a><br><br>
         </form>
     </div>
 </body>
